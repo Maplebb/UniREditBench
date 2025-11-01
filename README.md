@@ -8,7 +8,7 @@
 Shanghai Innovation Institue
 
 <a href="">
-<img src='https://img.shields.io/badge/arXiv-UniGenBench-blue' alt='Paper PDF'></a>
+<img src='https://img.shields.io/badge/arXiv-UniREditBench-blue' alt='Paper PDF'></a>
 
 
 
