@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style></style>
+  
+  <meta name="description" content="UniREditBench: A Unified Reasoning-based Image Editing Benchmark">
+  <meta name="keywords" content="Text-to-image Generation,Semantic Evaluation, Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniREditBench</title>
+
+
+  <link rel="shortcut icon" href="https://picx.zhimg.com/v2-cb40b1f8c3125f3cfb9a4538e1c0f2b7_l.jpg?source=32738c0c" type="image/x-icon">
+  <link href="./static/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/bulma.min.css">
+  <link rel="stylesheet" href="./static/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/academicons.min.css">
+  <link rel="stylesheet" href="./static/index.css">
+  <link rel="stylesheet" href="./static/leaderboard.css">
+
+  <script type="text/javascript" src="./static/sort-table.js" defer=""></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer="" src="./static/fontawesome.all.min.js"></script>
+  <script src="./static/bulma-carousel.min.js"></script>
+  <script src="./static/bulma-slider.min.js"></script>
+  <script src="./static/explorer-index.js"></script>
+  <script src="./static/question_card.js"></script>
+
+  <script src="./static/leaderboard_testmini.js"></script>  
+  <script src="./static/output_folders.js" defer=""></script>
+  <script src="./static/model_scores.js" defer=""></script>
+
+  <script src="./static/data_public.js" defer=""></script>
+
+  <style>
+      .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-top: -20px;
+        }
+    .node {
+      fill: #f8f1e4;
+      stroke: #000;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+    }
+    .node text {
+      font-size: 14px;
+      text-anchor: middle;
+    }
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+    }
+    .badge {
+      font-size: 12px;
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold" style="display: inline-block; margin-right: 0px;">
+            <span style="vertical-align: middle">UniREditBench: A Unified Reasoning-based Image Editing Benchmark</span>
+            </h1>
+          <div class="is-size-5 publication-authors">
+          <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=oFmRTTkAAAAJ&hl=zh-CN"><b>Feng Han</b></a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://codegoat24.github.io/"><b>Yibin Wang</b></a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=7LlS58IAAAAJ&hl=zh-CN"><b>Chenglin Li</b></a><sup>2,3</sup><sup></sup>,</span>
+            <span class="author-block">
+              <a href=""><b>Zheming Liang</b></a><sup>2</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=iP2HPFEAAAAJ"><b>Dianyi Wang</b></a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href=""><b>Yang Jiao</b></a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href=""><b>Zhipeng Wei</b></a><sup>1</sup>,</span>
+              <a href=""><b>Chao Gong</b></a><sup>1</sup>,</span>
+              <a href="https://jingjing1.github.io/#teach"><b>Jingjing Chen</b></a><sup>1</sup><sup>†</sup>,</span>
+                <a href="https://myownskyw7.github.io/"><b>Jiaqi Wang</b></a><sup>2,3</sup><sup>†</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="margin-right: 15px;"><sup>1</sup>Fudan University,</span> 
+            <span class="author-block" style="margin-right: 15px;"><sup>2</sup>Shanghai Innovation Intuition,</span>
+            <span class="author-block" style="margin-right: 15px;"><sup>3</sup>Zhejiang University</span>
+          </div>
+          <!-- ArXiv Link. -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+             
+              
+               <span class="link-block">
+                <a href="https://github.com/Maplebb/UniREditBench" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>UniREditBench</span>
+                  </a>
+              </span>
+              <br>
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      😊
+                  </span>
+                  <span>UniREdit-Bagel</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      😊
+                  </span>
+                  <span>UniREdit-Data-100K</span>
+                  </a>
+              </span>
+              <br>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Begin Teaser -->
+<div>
+<section class="section">
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h1 class="title is-3">UniREditBench Overview</h1>
+
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/teaser.png" alt="pipeline" >
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/radar.png" alt="pipeline" >
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+</section>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Benchmark Comparison</h2>
+
+      </div>
+    </div>
+      <div class="content has-text-centered">
+        <img src="static/images/motivation_tab.png" alt="data-overview" width="1200" height="800">
+      </div>
+      <div class="hero-body">
+        <h2 class="subtitle has-text-justified">
+          <p class="has-text-centered"><b>Reasoning-based image editing benchmark comparison.</b><br>UniREditBench excels in broader scenario and evaluation dimension coverage.</p>
+        </h2>
+      </div>
+      
+      <div class="content has-text-centered">
+        <img src="static/images/motivation_fig.png" alt="data-overview" width="1200" height="800">
+      </div>
+      <div class="hero-body">
+        <h2 class="subtitle has-text-justified">
+          <p class="has-text-centered"><b>Image editing evaluation comparison.</b><br>Current text-reference-only evaluation potentially leads to misjudging, while our dual-reference evaluation results in more reliable assessments.</p>
+        </h2>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<!-- End Teaser -->
+
+<div>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Evaluation Dimensions</h2>
+
+
+      </div>
+    </div>
+      <div class="content has-text-centered">
+        <img src="static/images/testpoint_cases.png" alt="data-overview" width="1000" height="800">
+      </div>
+      <div class="hero-body">
+        <h2 class="subtitle has-text-justified">
+          <p class="has-text-centered"><b>Qualitative Cases.</b><br>We present qualitative examples for each dimension across both real-world and game-world scenarios.</p>
+        </h2>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Multi-scenario Data Synthesis Pipeline</h2>
+
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+    
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/pipeline.png" alt="pipeline" width="800" height="500">
+      </div>
+    </div>
+    
+    
+  </div>
+ 
+
+</section>
+
+<section class="section">
+      
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-3">Benchmarking Results on UniREditBench</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/benchmarking_results.png" alt="pipeline" width="1200" height="500">
+      </div>
+    </div>
+    
+
+<div class="container is-max-desktop" >
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-3">UniREDit-Data-100K</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/word_cloud.png" alt="pipeline" >
+      </div>
+    </div>
+
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-3">UniREdit-Bagel</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/UniREdit-Bagel.png" alt="pipeline" >
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  </div>
+  
+  
+    
+
+
+</section>
+
+
+<section class="section">
+      
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-3">Out-of-distribution Results Comparison on RISEBench</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/RISE_compare.png" alt="pipeline" width="800" height="300">
+      </div>
+    </div>
+    
+
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-3">Out-of-distribution Results Comparison on KRISBench</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/KRIS_compare.png" alt="pipeline" width="800" height="300">
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  </div>
+  
+  
+    
+
+
+</section>
+
+      
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+</body></html>
