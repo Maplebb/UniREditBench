@@ -77,8 +77,6 @@ unzip reference_image.zip
 huggingface-cli download --resume-download maplebb/UniREdit-Bagel  --local-dir ./ckpt
 ```
 
-##  Preparation
-
 ## 📑 Prompt Introduction
 Each prompt in our benchmark is recorded as a dict in a `.json` file, combining with structured annotations for evaluation.  
 
