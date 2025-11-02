@@ -21,9 +21,9 @@ Shanghai Innovation Institue
 
 
 
-
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Data_100K-yellow)]()
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Bagel-yellow)]() 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREditBench-yellow)](https://huggingface.co/datasets/maplebb/UniREditBench)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Data_100K-yellow)](https://huggingface.co/datasets/maplebb/UniREdit-Data-100K)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Bagel-yellow)](https://huggingface.co/maplebb/UniREdit-Bagel) 
 </div>
 
 
