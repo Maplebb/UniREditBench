@@ -75,6 +75,10 @@ unzip reference_image.zip
 2. UniREdit-Bagel Checkpoint Preparation
 ```
 huggingface-cli download --resume-download maplebb/UniREdit-Bagel  --local-dir ./ckpt
+
+pip install safetensors
+
+python merge_ckpt.py
 ```
 
 ## 📑 Prompt Introduction
