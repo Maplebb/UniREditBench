@@ -126,6 +126,15 @@ python -u eval/gpt_eval_uniredit.py \
 ```
 - A detailed `.csv` **results file** will also be saved in the `/dir_of_edit_images` directory.
 
+## 💻 UniREdit-Data-100K Download
+```
+huggingface-cli download --repo-type dataset --resume-download maplebb/UniREdit-Data-100K  --local-dir ./UniREdit-Data-100K
+
+cd UniREdit-Data-100K
+
+unzip UniREdit-Data-100K.zip
+```
+
 ## 📧 Contact
 If you have any comments or questions, please open a new issue or feel free to contact [Feng Han](fhan25@m.fudan.edu.cn) and [Yibin Wang](https://codegoat24.github.io).
 
@@ -133,4 +142,5 @@ If you have any comments or questions, please open a new issue or feel free to c
 ## ⭐ Citation
 ```bibtex
 ```
+
 
