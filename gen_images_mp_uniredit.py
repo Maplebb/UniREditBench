@@ -5,7 +5,8 @@ import os
 import sys
 script_path = os.path.abspath(__file__)
 project_root = os.path.dirname(script_path)
-bagel_path = os.path.join(project_root, 'UniREdit-Bagel')
+sys.path.append(os.path.join(project_root, 'UniREdit-Bagel'))
+
 import json
 import argparse
 from safetensors.torch import load_file
@@ -413,6 +414,7 @@ def editing_image(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate images using CausalFusion model.")
+    parser.add_argument("--input_dir", type=str, required=True, help="Directory of UniREditBench.")
     parser.add_argument("--output_dir", type=str, required=True, help="Directory to save the generated images.")
     parser.add_argument("--metadata_file", type=str, required=True, help="JSON file containing lines of metadata for each prompt")
     parser.add_argument("--cfg_text_scale", type=float, default=4)
@@ -440,6 +442,7 @@ if __name__ == "__main__":
     world_size = dist.get_world_size()
     device = f"cuda:{rank}"
     
+    input_dir = args.input_dir
     output_dir = args.output_dir
     os.makedirs(output_dir, exist_ok=True)
     if rank == 0:
@@ -517,10 +520,10 @@ if __name__ == "__main__":
     for local_idx, idx in enumerate(range(start, end), 1):
         metadata = metadatas[idx]
 
-        img_path = metadata["before_image_path"]
+        img_path = os.path.join(input_dir, metadata["original_image_path"])
         prompt = metadata["instruction"]
         subdir = str(metadata["name"])           
-        filename = f"{metadata['new_idx']}.png"      
+        filename = f"{metadata['idx']}.png"      
         if "rules" in metadata.keys():
             prompt = metadata["rules"]+" "+prompt
 

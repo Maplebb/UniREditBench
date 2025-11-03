@@ -64,7 +64,15 @@ We propose <b>UniREditBench</b>, a unified benchmark for reasoning-based image e
 conda create -n uniredit python=3.10 -y
 conda activate uniredit
 pip install -r requirements.txt
-pip install flash_attn==2.5.8 --no-build-isolation
+pip install flash_attn==2.7.0.post1 --no-build-isolation
+```
+You can also install `flash_attn` via:
+```
+# for cuda11 torch2.5.x
+pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.0.post1/flash_attn-2.7.0.post1+cu11torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
+
+# for cuda12 torch2.5.x
+pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.0.post1/flash_attn-2.7.0.post1+cu12torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
 ```
 
 ## 🔧 Benchmark and Checkpoint Preparation
@@ -102,6 +110,7 @@ Each prompt in our benchmark is recorded as a dict in a `.json` file, combining 
 ```
 GPUS=8
 model_path=./ckpt
+input_path=./UniREditBench
 output_path=./output_images
 
 # Image Editing with Reasoning
@@ -109,6 +118,7 @@ torchrun \
     --nnodes=1 \
     --nproc_per_node=$GPUS \
     gen_images_mp_uniredit.py \
+    --input_dir $input_path \
     --output_dir $output_path \
     --metadata_file ./UniREditBench/data.json \
     --max_latent_size 64 \
