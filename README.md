@@ -25,12 +25,12 @@ Shanghai Innovation Institute
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Data_100K-yellow)](https://huggingface.co/datasets/maplebb/UniREdit-Data-100K)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Bagel-yellow)](https://huggingface.co/maplebb/UniREdit-Bagel) 
 <br>
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREditBench_Leaderboard-yellow)](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Leaderboard-yellow)](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) 
 </div>
 
 
 ## 🔥 News
-- [2025/11/02] 🔥🔥 We release [UniRE](https://github.com/Maplebb/UniREditBench/blob/main/UniREditBench-Technical_Report.pdf) and [project page](https://maplebb.github.io/UniREditBench/) of UniREditBench!!
+- [2025/11/03] 🔥🔥 We release [UniREditBench](https://huggingface.co/datasets/maplebb/UniREditBench), [UniREdit-Data-100K](https://huggingface.co/datasets/maplebb/UniREdit-Data-100K), UniREdit-Bagel-[[BF16](https://huggingface.co/maplebb/UniREdit-Bagel-bf16)/[FP32](https://huggingface.co/maplebb/UniREdit-Bagel)], and 🏆 [Leaderboard](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) !!
 - [2025/11/02] 🔥🔥 We release [paper](https://github.com/Maplebb/UniREditBench/blob/main/UniREditBench-Technical_Report.pdf) and [project page](https://maplebb.github.io/UniREditBench/) of UniREditBench!!
 
 
@@ -64,7 +64,15 @@ We propose <b>UniREditBench</b>, a unified benchmark for reasoning-based image e
 conda create -n uniredit python=3.10 -y
 conda activate uniredit
 pip install -r requirements.txt
-pip install flash_attn==2.5.8 --no-build-isolation
+pip install flash_attn==2.7.0.post1 --no-build-isolation
+```
+You can also install `flash_attn` via:
+```
+# for cuda11 torch2.5.x
+pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.0.post1/flash_attn-2.7.0.post1+cu11torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
+
+# for cuda12 torch2.5.x
+pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.0.post1/flash_attn-2.7.0.post1+cu12torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
 ```
 
 ## 🔧 Benchmark and Checkpoint Preparation
@@ -102,6 +110,7 @@ Each prompt in our benchmark is recorded as a dict in a `.json` file, combining 
 ```
 GPUS=8
 model_path=./ckpt
+input_path=./UniREditBench
 output_path=./output_images
 
 # Image Editing with Reasoning
@@ -109,6 +118,7 @@ torchrun \
     --nnodes=1 \
     --nproc_per_node=$GPUS \
     gen_images_mp_uniredit.py \
+    --input_dir $input_path \
     --output_dir $output_path \
     --metadata_file ./UniREditBench/data.json \
     --max_latent_size 64 \

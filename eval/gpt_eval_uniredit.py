@@ -273,7 +273,7 @@ def main():
         if row['key'] not in result:
             items.append(row)
 
-    tups = [dict(item=x, output_dir=args.output) for x in items]
+    tups = [dict(item=x, input_dir=args.input, output_dir=args.output) for x in items]
     keys = [x['key'] for x in items]
 
     if len(tups):
@@ -376,3 +376,5 @@ if __name__ == '__main__':
         api_key=api_key,
     )
     main()
+    
+    
