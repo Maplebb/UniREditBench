@@ -5,7 +5,7 @@
 
 [UnifiedReward](https://github.com/CodeGoat24/UnifiedReward) Team
 
-Shanghai Innovation Institue
+Shanghai Innovation Institute
 
 <a href="">
 <img src='https://img.shields.io/badge/arXiv-UniREditBench-blue' alt='Paper PDF'></a>
