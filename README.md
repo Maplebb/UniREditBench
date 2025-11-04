@@ -95,7 +95,6 @@ python merge_ckpt.py
 ## 📑 Prompt Introduction
 Each prompt in our benchmark is recorded as a dict in a `.json` file, combining with structured annotations for evaluation.  
 
-- **index** 
 - **original_image_path**: Path of the original image.
 - **reference_image_path**: Path of the reference image.
 - **instruction**: The editing instruction.
