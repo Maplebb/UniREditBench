@@ -31,7 +31,7 @@ Shanghai Innovation Institute
 
 ## 🔥 News
 - [2025/11/03] 🔥🔥 We release [UniREditBench](https://huggingface.co/datasets/maplebb/UniREditBench), [UniREdit-Data-100K](https://huggingface.co/datasets/maplebb/UniREdit-Data-100K), UniREdit-Bagel-[[BF16](https://huggingface.co/maplebb/UniREdit-Bagel-bf16)/[FP32](https://huggingface.co/maplebb/UniREdit-Bagel)], and 🏆 [Leaderboard](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) !!
-- [2025/11/02] 🔥🔥 We release [paper](https://github.com/Maplebb/UniREditBench/blob/main/UniREditBench-Technical_Report.pdf) and [project page](https://maplebb.github.io/UniREditBench/) of UniREditBench!!
+- [2025/11/02] 🔥🔥 We release [paper](https://arxiv.org/abs/2511.01295) and [project page](https://maplebb.github.io/UniREditBench/) of UniREditBench!!
 
 
 
