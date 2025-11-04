@@ -7,7 +7,7 @@
 
 Shanghai Innovation Institute
 
-<a href="">
+<a href="https://arxiv.org/abs/2511.01295">
 <img src='https://img.shields.io/badge/arXiv-UniREditBench-blue' alt='Paper PDF'></a>
 
 
