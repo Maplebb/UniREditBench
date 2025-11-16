@@ -157,8 +157,8 @@ python -u gen_train_json_and_parquet.py --src_json ./UniREdit-Data-100K/train_da
 ```
 
 #### 3. Train
-1. Clone the github repository of Bagel.
-2. Edit every placeholder in `data/dataset_info.py`.
+1. Edit every placeholder in `data/dataset_info.py`.
+2. Clone the github repository of Bagel.
 3. Replace Bagel's `data/` with our `data/`.
 4. Reference `train.sh` and the training guide of Bagel for fine-tuning.
 
