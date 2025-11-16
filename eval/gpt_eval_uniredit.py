@@ -57,7 +57,7 @@ def gpt_generate(inputs, temperature=0, max_tokens=4096, image_size=768, **kwarg
     answer = 'Failed to obtain answer via API. '
     try:
         answer = response['choices'][0]['message']['content'].strip()
-        print(f"Input: {input}\nAnswer: {answer}")
+        print(f"Input: {inputs}\nAnswer: {answer}")
     except Exception as err:
         print(f'{type(err)}: {err}')
         print(response)

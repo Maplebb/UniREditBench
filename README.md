@@ -138,7 +138,9 @@ python -u eval/gpt_eval_uniredit.py \
 ```
 - A detailed `.csv` **results file** will also be saved in the `/dir_of_edit_images` directory.
 
-## 💻 UniREdit-Data-100K Download
+## 💻 Training
+
+#### 1. UniREdit-Data-100K Download
 ```
 huggingface-cli download --repo-type dataset --resume-download maplebb/UniREdit-Data-100K  --local-dir ./UniREdit-Data-100K
 
@@ -146,6 +148,19 @@ cd UniREdit-Data-100K
 
 unzip UniREdit-Data-100K.zip
 ```
+
+#### 2. Prepare Training Parquet
+```
+mkdir training_data
+
+python -u gen_train_json_and_parquet.py --src_json ./UniREdit-Data-100K/train_data.json --dataset_dir ./UniREdit-Data-100 --out_json ./training_data/all_data.json --out_parquet_dir ./training_data
+```
+
+#### 3. Train
+1. Clone the github repository of Bagel.
+2. Edit every `your_data_path` placeholder in `data/dataset_info.py`.
+3. Replace Bagel's `data/` with our `data/`.
+4. Reference `train.sh` and the training guide of Bagel for fine-tuning.
 
 ## 📧 Contact
 If you have any comments or questions, please open a new issue or feel free to contact [Feng Han](fhan25@m.fudan.edu.cn) and [Yibin Wang](https://codegoat24.github.io).
