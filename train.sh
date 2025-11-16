@@ -34,6 +34,7 @@ torchrun \
   --ema 0.995 \
   --warmup_steps 1000 \
   --total_steps 15000 \
+  # We finally adopted the checkpoint after 5,000 steps of fine-tuning.
   --min_lr 1e-6 \
   --lr_scheduler cosine \
   --save_every 1000 \
