@@ -1,6 +1,3 @@
-# Copyright 2025 Bytedance Ltd. and/or its affiliates.
-# SPDX-License-Identifier: Apache-2.0
-
 import os
 import sys
 script_path = os.path.abspath(__file__)
