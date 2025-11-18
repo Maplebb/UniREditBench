@@ -146,7 +146,9 @@ huggingface-cli download --repo-type dataset --resume-download maplebb/UniREdit-
 
 cd UniREdit-Data-100K
 
-unzip UniREdit-Data-100K.zip
+# For linux (Debian、Ubuntu)
+apt-get install p7zip-full 
+7z x UniREdit-Data-100K.zip
 ```
 
 #### 2. Prepare Training Parquet
