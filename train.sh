@@ -1,4 +1,4 @@
-# 先改 data/dataset_info.py
+# first modify data/dataset_info.py
 num_nodes=1
 node_rank=0
 master_addr=127.0.0.1
