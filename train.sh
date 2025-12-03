@@ -38,7 +38,7 @@ torchrun \
   --min_lr 1e-6 \
   --lr_scheduler cosine \
   --save_every 1000 \
-  --ce_weight 0.25 \
+  --ce_weight 2 \
   --lr 2e-5 \
   --timestep_shift 4 \
   --num_worker 1 \
