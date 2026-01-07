@@ -26,11 +26,13 @@ Shanghai Innovation Institute
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREdit_Bagel-yellow)](https://huggingface.co/maplebb/UniREdit-Bagel) 
 <br>
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREditBench_Leaderboard-yellow)](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-UniREditBench_Gallery-yellow)](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard](https://huggingface.co/spaces/maplebb/UniREditBench_Gallery) 
 </div>
 
 
 ## 🔥 News
-- [2025/12] 🔥🔥 Lumina-DiMOO, UniWorld-V2, and DreamOmni2 are added to all 🏅Leaderboard.
+- [2026/01/07] 🔥🔥 For clearer visualization, we provide an online 🖼️gallery that showcases generated images during baseline evaluations. Enjoy it!
+- [2025/12/05] 🔥🔥 Lumina-DiMOO, UniWorld-V2, and DreamOmni2 are added to all 🏅Leaderboard.
 - [2025/11/03] 🔥🔥 We release [UniREditBench](https://huggingface.co/datasets/maplebb/UniREditBench), [UniREdit-Data-100K](https://huggingface.co/datasets/maplebb/UniREdit-Data-100K), UniREdit-Bagel-[[BF16](https://huggingface.co/maplebb/UniREdit-Bagel-bf16)/[FP32](https://huggingface.co/maplebb/UniREdit-Bagel)], and 🏆 [Leaderboard](https://huggingface.co/spaces/maplebb/UniREditBench_Leaderboard) !!
 - [2025/11/02] 🔥🔥 We release [paper](https://arxiv.org/abs/2511.01295) and [project page](https://maplebb.github.io/UniREditBench/) of UniREditBench!!
 
