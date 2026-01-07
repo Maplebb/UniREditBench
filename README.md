@@ -56,7 +56,7 @@ We propose <b>UniREditBench</b>, a unified benchmark for reasoning-based image e
 
 
 <img alt="image" src="docs/static/images/motivation_tab.png" />
-<img alt="image" src="docs/static/images/motivation_fig.png" />
+<img alt="image" src="docs/static/images/motivation_fig_new.png" />
 
 <img alt="image" src="docs/static/images/testpoint_cases.png" />
 
