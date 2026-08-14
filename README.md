@@ -173,12 +173,10 @@ If you have any comments or questions, please open a new issue or feel free to c
 
 ## ⭐ Citation
 ```bibtex
-@article{unireditbench,
-  title={UniREditBench: A Unified Reasoning-based Image Editing Benchmark},
-  author={Han, Feng and Wang, Yibin and Li, Chenglin and Liang, Zheming and Wang, Dianyi and Jiao, Yang and Wei, Zhipeng and Gong, Chao and Jin, Cheng and Chen, Jingjing and others},
+@article{han2025unireditbench,
+  title={Unireditbench: A unified reasoning-based image editing benchmark},
+  author={Han, Feng and Wang, Yibin and Li, Chenglin and Liang, Zheming and Wang, Dianyi and Jiao, Yang and Wei, Zhipeng and Gong, Chao and Jin, Cheng and Wang, Jiaqi},
   journal={arXiv preprint arXiv:2511.01295},
   year={2025}
 }
 ```
-
-
